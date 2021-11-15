@@ -27,6 +27,7 @@ Classe Circle(point, radius)
 	//detection d'un point dans le cercle
 	fonction containsPoint(point)
         debut
+		isIntoCircle : booleen
 		pointX : entier
 		pointY : entier
 		cercleX : entier
@@ -37,9 +38,10 @@ Classe Circle(point, radius)
 		cercleY = this.getY()
             
             si (pointX - cercleX)^2 + (pointY - cercleY)^2 < radius^2
-            	retourne "Le point est dans le cercle"
+            	retourne isIntoCircle
             sinon
-                retourne "Le point est hors du cercle"
+	    	isIntoCircle = false
+                retourne isIntoCircle
             finsi
             
         fin
