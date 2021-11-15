@@ -1,0 +1,16 @@
+programme main()
+    cercle : Circle
+    point1 : Point
+    point2 : Point
+
+Debut
+    point1(1, 3)
+    cercle(point, 5)
+    point2(2, 6)
+
+    // Affiche le cercle
+    afficher cercle.toString()
+
+    // Teste si un point est dans notre cercle
+    afficher cercle.containsPoint(point2)
+Fin

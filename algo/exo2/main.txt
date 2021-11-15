@@ -1,0 +1,14 @@
+programme main()
+
+    point1: Point
+
+Debut
+
+    point1.setX(1)
+    point1.setY(2)
+
+    point1.toString()
+
+Fin
+
+importer Classe Point

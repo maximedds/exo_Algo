@@ -1,0 +1,23 @@
+programme main
+	hippo1: Hippopotamus
+    	hippo2: Hippopotamus
+    	hippo3: Hippopotamus
+
+debut
+	hippo1("moi", 100000, 5)
+	hippo2("moche", 999999999, 2)
+	hippo3("mechant", 300000, 999)
+
+	hippo3.fight(hippo2)
+
+	pour i allant de 1 à 21
+		pour j allant de 1 a 15
+			hippo1.swim().eat().swim().swim().eat()
+		finPour
+ 		hippo1.toString()
+		Afficher "soir " + str(i)
+	finPour
+
+fin
+
+importer Classe Hippopotamus

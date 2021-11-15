@@ -1,0 +1,40 @@
+/* 
+programme hippopotame
+but : créer une classe qui génere un hippopotame
+auteur: Maxime DEDENIS
+date : 15/11/2021
+*/
+
+classe Hippopotamus(name, weight, tusksSize)
+	name: chaine
+	weight: réel
+	tusksSize: reel
+
+	// prend du poids apres avoir mangé
+	fonction eat()
+	debut
+		weight = weight + 1000
+	fin
+
+	// perd du poids apres avoir nagé
+	fonction swim()
+	debut
+		weight = weight - 300
+	fin
+
+	// combat un autre hippo et retourne le vainqueur
+	fonction fight(Hippopotamus hippo)
+	debut
+		si this.tusksSize > opponent.tusksSize alors
+            		retourne "le gagnant est " + this.name
+        	sinon
+            		retourne "le gagnant est " + hippo.name
+        	finsi
+	fin
+
+	//conversion de l'objet en chaine
+	fonction toString()
+	debut
+		retourne     "name: " + str(name) + "weight: " + str(weight) + "tusksSize: " + str(tusksSize)
+    	fin
+fin

@@ -1,0 +1,56 @@
+Classe Circle(point, radius) 
+    point : Point
+    radius : entier
+
+    debut
+        fonction getRadius()
+        debut
+            retourne radius
+        fin
+
+        fonction setRadius(int: reel)
+        debut
+            radius = int
+        fin
+
+        fonction convertToString()
+        debut
+            retourne "radius : " + str(radius)
+        fin
+
+        fonction area()
+        debut
+            aire : entier
+            aire = pi * radius^2
+        fin
+
+	//detection d'un point dans le cercle
+	fonction containsPoint(point)
+        debut
+		pointX : entier
+		pointY : entier
+		cercleX : entier
+		cercleY : entier
+		pointX = point.getX()
+		pointY = point.getY()
+		cercleX = this.getX()
+		cercleY = this.getY()
+            
+            si (pointX - cercleX)^2 + (pointY - cercleY)^2 < radius^2
+            	retourne "Le point est dans le cercle"
+            sinon
+                retourne "Le point est hors du cercle"
+            finsi
+            
+        fin
+        
+        //conversion de l'objet en chaine
+        fonction convertToString()
+        debut
+            	string : chaine
+            	string = "Cercle de centre [" + str(x) + ", " + str(y) + "] et de rayon " + radius
+            	retourne string
+        fin
+fin
+
+importer Classe exo2.Point

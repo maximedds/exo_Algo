@@ -1,0 +1,39 @@
+/* 
+programme cercle
+but : créer une classe qui génere un cercle
+auteur: Maxime DEDENIS
+date : 15/11/2021
+*/
+
+
+classe Point(x, y)
+    x: réel
+    y: réel
+
+Debut
+    	fonction getX()
+   	 Debut
+		Retourne x
+   	 Fin
+
+  	  fonction getY()
+  	  Debut
+		Retourne y
+  	  Fin
+
+  	  fonction setX(int: réel)
+  	  Debut
+		x = int
+   	 Fin
+
+    	fonction setY(int: réel)
+    	Debut
+		y = int
+    	Fin
+
+	//conversion de l'objet en chaine
+    	toString()
+    	debut
+		retourne "x = " + str(x) + "y = " + str(y)
+    	fin
+Fin
