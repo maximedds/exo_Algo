@@ -1,0 +1,33 @@
+/* 
+  programme Transfert
+  auteur : maxime dedenis
+  date : 21/11/2021
+*/
+
+import Authentification
+import ContactManager
+
+Classe Transfert
+	id:reel
+
+	fonction Transfer(id:reel)
+	debut
+		this.id=id
+	fin
+
+	fonction getid()
+	debut
+		retourner this.id
+	fin
+
+	fonction setid(id:reel)
+	debut
+		this.id=id
+	fin
+
+	fonction effectuervirement(user:Authentification,contact:ContactManager, montant:reel)
+	debut
+		user.setSolde(user.getSolde()-montant)
+		contact.setSolde(contact.getSolde()+montant)
+		afficher "Virement de "+montant+"€ effectué vers "+contact.getPrenom()+" "+contact.getNom()
+	fin

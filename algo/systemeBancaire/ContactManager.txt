@@ -1,0 +1,48 @@
+/*
+  programme ContactManager
+  auteur : Maxime dedenis
+  date : 21/11/2021
+*/
+
+Class ContactManager
+	prenom:chaine
+	nom:chaine
+	iban:chaine
+	solde:reel
+
+	fonction ContactManager(prenom:chaine,nom:chaine,iban:chaine)
+	debut
+		this.prenom=prenom
+		this.nom=nom
+		this.iban=iban
+	fin
+
+	fonction getprenom()
+	debut
+		retourner this.prenom
+	fin
+
+	fonction setprenom(prenom:chaine)
+	debut
+		this.prenom=prenom
+	fin
+
+	fonction getnom()
+	debut
+		retourner this.nom
+	fin
+
+	fonction setnom(nom:chaine)
+	debut
+		this.nom=nom
+	fin
+
+	fonction getiban()
+	debut
+		retourner this.iban
+	fin
+
+	fonction setiban(iban:chaine)
+	debut
+		this.iban=iban
+	fin

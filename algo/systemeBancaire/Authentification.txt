@@ -1,0 +1,105 @@
+/* 
+  programme Authentification
+  auteur : Maxime dedenis
+  date : 21/11/2021
+*/
+
+Class Authentification
+	prenom:chaine
+	nom:chaine
+	mail:chaine
+	motdepasse:chaine
+	solde:reel
+
+	//Constructeur
+
+	fonction Authentification(prenom:chaine,nom:chaine,mail:chaine,motdepasse:chaine)
+	debut
+		this.prenom=prenom;
+		this.nom=nom;
+		this.chaine=chaine;
+		this.motdepasse=motdepasse;
+	fin
+
+	fonction getPrenom()
+	debut
+		retourner this.prenom;
+	fin
+
+	fonction setPrenom(prenom:chaine)
+	debut
+		this.prenom=prenom;
+	fin
+
+	fonction getNom()
+	debut
+		retourner this.nom;
+	fin
+
+	fonction setNom(nom:chaine)
+	debut
+		this.nom=nom;
+	fin
+
+	fonction getMail()
+	debut
+		retourner this.mail;
+	fin
+
+	fonction setMail(mail:chaine)
+	debut
+		this.mail=mail;
+	fin
+
+	fonction getSolde()
+	debut
+		retourner this.solde;
+	fin
+
+	fonction setSolde(solde:chaine)
+	debut
+		this.solde=solde;
+	fin
+
+	fonction authentifier()
+		mailsaisi:chaine
+		motdepassesaisi:chaine
+		continuer:booleen
+		reponse:chaine
+		nouveaumdp:chaine
+
+		debut
+			afficher "Saisissez votre mail"
+			tantque continuer!=vrai
+				saisir mailsaisi
+				si mailsaisi == this.mail alors
+					continuer=vrai
+				finsi
+			fintantque
+			affecter continuer=faux
+			saisir motdepassesaisi
+			tant que continuer!=vrai
+				si motdepassesaisi == this.motdepasse alors
+					continuer=vrai
+				sinon
+					afficher "Mot de passe oublié ? ('o' ou 'n')"
+					saisir reponse
+					si reponse=='o' alors
+						afficher "Saisissez le nouveau mot de passe"
+						saisir nouveaumdp
+						this.setmotdepasse(nouveaumdp)
+					finsi
+					si reponse=='n' alors
+						this.authentifier()
+					finsi
+				finsi
+			fintantque
+			afficher "Vous êtes bien authentifié"
+		fin
+
+	fonction getInfoClient()
+		debut
+    			retourner "Nom : " + this.client.getNom() +
+              			"Prenom : " + this.client.getPrenom() +
+              			"IBAN : " + this.client.getIBAN()
+		fin
